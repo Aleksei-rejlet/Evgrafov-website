@@ -19,12 +19,14 @@ const syncActiveCategory = (entries) => {
   });
 };
 
-const sectionObserver = new IntersectionObserver(syncActiveCategory, {
-  rootMargin: "-42% 0px -50% 0px",
-  threshold: 0,
-});
+if (sections.length) {
+  const sectionObserver = new IntersectionObserver(syncActiveCategory, {
+    rootMargin: "-42% 0px -50% 0px",
+    threshold: 0,
+  });
 
-sections.forEach((section) => sectionObserver.observe(section));
+  sections.forEach((section) => sectionObserver.observe(section));
+}
 
 document.querySelectorAll(".carousel-shell").forEach((shell) => {
   const carousel = shell.querySelector(".product-carousel");
@@ -43,6 +45,8 @@ document.querySelectorAll(".carousel-shell").forEach((shell) => {
 
 const renderCart = () => {
   const totalItems = [...cart.values()].reduce((sum, quantity) => sum + quantity, 0);
+  if (!cartCount || !cartItems) return;
+
   cartCount.textContent = totalItems;
 
   if (totalItems === 0) {
@@ -63,12 +67,14 @@ const renderCart = () => {
 };
 
 const openCart = () => {
+  if (!cartPanel) return;
   cartPanel.classList.add("is-open");
   cartPanel.setAttribute("aria-hidden", "false");
   document.body.classList.add("cart-open");
 };
 
 const closeCart = () => {
+  if (!cartPanel) return;
   cartPanel.classList.remove("is-open");
   cartPanel.setAttribute("aria-hidden", "true");
   document.body.classList.remove("cart-open");
@@ -83,8 +89,28 @@ addButtons.forEach((button) => {
   });
 });
 
-cartButton.addEventListener("click", openCart);
+cartButton?.addEventListener("click", openCart);
 document.querySelectorAll("[data-close-cart]").forEach((button) => button.addEventListener("click", closeCart));
+
+document.querySelectorAll("[data-color-button]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const group = button.dataset.colorButton;
+    const image = document.querySelector(`[data-color-target="${group}"]`);
+    const label = document.querySelector(`[data-color-label="${group}"]`);
+
+    if (!image) return;
+
+    image.src = button.dataset.colorSrc;
+    image.alt = button.dataset.colorAlt;
+    if (label) {
+      label.textContent = `${button.dataset.colorName} colorway.`;
+    }
+
+    document.querySelectorAll(`[data-color-button="${group}"]`).forEach((option) => {
+      option.classList.toggle("is-active", option === button);
+    });
+  });
+});
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closeCart();
