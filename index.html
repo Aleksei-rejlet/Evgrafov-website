@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Evgrafov high fashion collection, minimal lookbook shopping experience."
+    />
+    <title>Evgrafov Atelier</title>
+    <link rel="preload" href="src/styles.css" as="style" />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary navigation">
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open category menu"
+        aria-controls="categoryMenu"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <a class="brand-mark" href="#runway" aria-label="Evgrafov home">
+        <img
+          src="assets/generated/brand/logo-banner.webp"
+          width="900"
+          height="223"
+          alt="Evgrafov"
+        />
+      </a>
+
+      <button
+        class="cart-button"
+        type="button"
+        aria-label="Open cart"
+        aria-controls="cartPanel"
+      >
+        <span>Cart</span>
+        <span class="cart-count" data-cart-count>0</span>
+      </button>
+    </header>
+
+    <nav
+      class="category-menu"
+      id="categoryMenu"
+      aria-label="Collection categories"
+    >
+      <a href="#runway" class="is-active">Runway</a>
+      <a href="#evening">Evening</a>
+      <a href="#tailoring">Tailoring</a>
+      <a href="#objects">Objects</a>
+      <a href="#archive">Archive</a>
+    </nav>
+
+    <main>
+      <section class="hero" id="runway" aria-labelledby="runway-title">
+        <video
+          class="hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="assets/generated/products/IMG_8112-thumb.webp"
+        >
+          <source src="assets/vid/look_trailer.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-copy">
+          <p>Atelier No. 01</p>
+          <h1 id="runway-title">Evgrafov</h1>
+          <span>Architectural silhouettes in limited release.</span>
+        </div>
+      </section>
+
+      <section
+        class="collection-section"
+        id="evening"
+        aria-labelledby="evening-title"
+      >
+        <div class="section-heading">
+          <p>Category</p>
+          <h2 id="evening-title">Evening</h2>
+        </div>
+        <div class="carousel-shell">
+          <button
+            class="carousel-control prev"
+            type="button"
+            aria-label="Previous evening piece"
+          >
+            Prev
+          </button>
+          <div
+            class="product-carousel"
+            tabindex="0"
+            aria-label="Evening collection"
+          >
+            <article class="product-card">
+              <img
+                src="assets/generated/products/IMG_8112.webp"
+                width="1400"
+                height="1050"
+                alt="Noir column gown sketch"
+                loading="lazy"
+              />
+              <div>
+                <h3>Noir Column</h3>
+                <p>
+                  Long vertical form with a sharpened shoulder and precise
+                  evening line.
+                </p>
+              </div>
+              <button type="button" data-add="Noir Column">Add</button>
+            </article>
+            <article class="product-card">
+              <img
+                src="assets/generated/products/IMG_8113.webp"
+                width="1400"
+                height="1050"
+                alt="Pearl drape look sketch"
+                loading="lazy"
+              />
+              <div>
+                <h3>Pearl Drape</h3>
+                <p>
+                  Soft volume held by a clean neckline, designed for quiet
+                  movement.
+                </p>
+              </div>
+              <button type="button" data-add="Pearl Drape">Add</button>
+            </article>
+            <article class="product-card">
+              <img
+                src="assets/generated/products/IMG_8114.webp"
+                width="1400"
+                height="1050"
+                alt="Opera line dress sketch"
+                loading="lazy"
+              />
+              <div>
+                <h3>Opera Line</h3>
+                <p>
+                  A floor-length study in restraint with a sculptural side
+                  profile.
+                </p>
+              </div>
+              <button type="button" data-add="Opera Line">Add</button>
+            </article>
+          </div>
+          <button
+            class="carousel-control next"
+            type="button"
+            aria-label="Next evening piece"
+          >
+            Next
+          </button>
+        </div>
+      </section>
+
+      <section
+        class="collection-section"
+        id="tailoring"
+        aria-labelledby="tailoring-title"
+      >
+        <div class="section-heading">
+          <p>Category</p>
+          <h2 id="tailoring-title">Tailoring</h2>
+        </div>
+        <div class="carousel-shell">
+          <button
+            class="carousel-control prev"
+            type="button"
+            aria-label="Previous tailoring piece"
+          >
+            Prev
+          </button>
+          <div
+            class="product-carousel"
+            tabindex="0"
+            aria-label="Tailoring collection"
+          >
+            <article class="product-card">
+              <img
+                src="assets/generated/products/IMG_8115.webp"
+                width="1400"
+                height="1050"
+                alt="Blade jacket sketch"
+                loading="lazy"
+              />
+              <div>
+                <h3>Blade Jacket</h3>
+                <p>
+                  Single-breasted tailoring with a long lapel and narrowed
+                  waist.
+                </p>
+              </div>
+              <button type="button" data-add="Blade Jacket">Add</button>
+            </article>
+            <article class="product-card">
+              <img
+                src="assets/generated/products/IMG_8116.webp"
+                width="1400"
+                height="1050"
+                alt="Slate suit sketch"
+                loading="lazy"
+              />
+              <div>
+                <h3>Slate Suit</h3>
+                <p>
+                  Relaxed proportion, high break, and a severe trouser fall.
+                </p>
+              </div>
+              <button type="button" data-add="Slate Suit">Add</button>
+            </article>
+            <article class="product-card">
+              <img
+                src="assets/generated/products/IMG_8117.webp"
+                width="1400"
+                height="1050"
+                alt="Atelier coat sketch"
+                loading="lazy"
+              />
+              <div>
+                <h3>Atelier Coat</h3>
+                <p>Lightweight overcoat cut to float away from the body.</p>
+              </div>
+              <button type="button" data-add="Atelier Coat">Add</button>
+            </article>
+          </div>
+          <button
+            class="carousel-control next"
+            type="button"
+            aria-label="Next tailoring piece"
+          >
+            Next
+          </button>
+        </div>
+      </section>
+
+      <section
+        class="collection-section"
+        id="objects"
+        aria-labelledby="objects-title"
+      >
+        <div class="section-heading">
+          <p>Category</p>
+          <h2 id="objects-title">Objects</h2>
+        </div>
+        <div class="carousel-shell">
+          <button
+            class="carousel-control prev"
+            type="button"
+            aria-label="Previous object"
+          >
+            Prev
+          </button>
+          <div
+            class="product-carousel"
+            tabindex="0"
+            aria-label="Objects collection"
+          >
+            <article class="product-card">
+              <img
+                src="assets/generated/products/IMG_8118.webp"
+                width="1400"
+                height="1050"
+                alt="Silk wrap object sketch"
+                loading="lazy"
+              />
+              <div>
+                <h3>Silk Wrap</h3>
+                <p>
+                  A fluid accessory piece that moves between scarf and garment.
+                </p>
+              </div>
+              <button type="button" data-add="Silk Wrap">Add</button>
+            </article>
+            <article class="product-card">
+              <img
+                src="assets/generated/products/IMG_8119.webp"
+                width="1400"
+                height="1050"
+                alt="Monogram veil object sketch"
+                loading="lazy"
+              />
+              <div>
+                <h3>Monogram Veil</h3>
+                <p>Transparent layer with a restrained studio signature.</p>
+              </div>
+              <button type="button" data-add="Monogram Veil">Add</button>
+            </article>
+          </div>
+          <button
+            class="carousel-control next"
+            type="button"
+            aria-label="Next object"
+          >
+            Next
+          </button>
+        </div>
+      </section>
+
+      <section
+        class="archive-section"
+        id="archive"
+        aria-labelledby="archive-title"
+      >
+        <div>
+          <p>Archive</p>
+          <h2 id="archive-title">Private appointments and custom orders.</h2>
+        </div>
+        <a href="mailto:atelier@evgrafov.example">Request selection</a>
+      </section>
+    </main>
+
+    <aside
+      class="cart-panel"
+      id="cartPanel"
+      aria-hidden="true"
+      aria-label="Shopping cart"
+    >
+      <div class="cart-scrim" data-close-cart></div>
+      <div
+        class="cart-drawer"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="cart-title"
+      >
+        <div class="cart-heading">
+          <h2 id="cart-title">Cart</h2>
+          <button type="button" data-close-cart aria-label="Close cart">
+            Close
+          </button>
+        </div>
+        <div class="cart-items" data-cart-items>
+          <p>Your selection is empty.</p>
+        </div>
+        <button class="checkout-button" type="button">Request order</button>
+      </div>
+    </aside>
+
+    <script src="src/main.js" defer></script>
+  </body>
+</html>
