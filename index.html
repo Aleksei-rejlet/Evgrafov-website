@@ -328,3 +328,13 @@
     <script src="src/main.js" defer></script>
   </body>
 </html>
+
+cd /Users/nemorejlet/Documents/GitHub/Evgrafov-website && /usr/local/bin/python3
+- <<'PY' from PIL import Image from pathlib import Path p =
+Path('assets/img/generated/products') targets = 'IMG_8120-thumb.webp' for name
+in targets: path = p / name if path.exists(): with Image.open(path) as img:
+rotated = img.transpose(Image.ROTATE_180) rotated = rotated.resize((390,520))
+rotated.save(path, format='WEBP', quality=95) print('rotated', path.name, '->',
+rotated.size) else: print('missing', path.name) # verify for path in
+sorted(p.glob('IMG_8120*.webp')): with Image.open(path) as img:
+print('verified', path.name, img.size) PY
