@@ -48,6 +48,11 @@ const renderCart = () => {
   if (!cartCount || !cartItems) return;
 
   cartCount.textContent = totalItems;
+  if (totalItems === 0) {
+    cartCount.classList.add("hidden");
+  } else {
+    cartCount.classList.remove("hidden");
+  }
 
   if (totalItems === 0) {
     cartItems.innerHTML = "<p>Your selection is empty.</p>";
