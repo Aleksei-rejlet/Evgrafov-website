@@ -8,6 +8,9 @@ const cartPanel = document.querySelector("#cartPanel");
 const cartItems = document.querySelector("[data-cart-items]");
 const cartCount = document.querySelector("[data-cart-count]");
 const addButtons = document.querySelectorAll("[data-add]");
+const lookLightbox = document.querySelector("[data-look-lightbox]");
+const lookLightboxImage = document.querySelector("[data-look-lightbox-image]");
+const lookLightboxCaption = document.querySelector("[data-look-lightbox-caption]");
 const cart = new Map();
 
 const syncActiveCategory = (entries) => {
@@ -86,6 +89,27 @@ const closeCart = () => {
   document.body.classList.remove("cart-open");
 };
 
+const openLookLightbox = (image) => {
+  if (!lookLightbox || !lookLightboxImage) return;
+
+  lookLightboxImage.src = image.currentSrc || image.src;
+  lookLightboxImage.alt = image.alt || "Detailed collection look";
+  if (lookLightboxCaption) {
+    lookLightboxCaption.textContent = image.alt || "";
+  }
+
+  lookLightbox.classList.add("is-open");
+  lookLightbox.setAttribute("aria-hidden", "false");
+  document.body.classList.add("look-open");
+};
+
+const closeLookLightbox = () => {
+  if (!lookLightbox) return;
+  lookLightbox.classList.remove("is-open");
+  lookLightbox.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("look-open");
+};
+
 addButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const name = button.dataset.add;
@@ -97,6 +121,10 @@ addButtons.forEach((button) => {
 
 cartButton?.addEventListener("click", openCart);
 document.querySelectorAll("[data-close-cart]").forEach((button) => button.addEventListener("click", closeCart));
+document.querySelectorAll(".look-slide img").forEach((image) => {
+  image.addEventListener("click", () => openLookLightbox(image));
+});
+document.querySelectorAll("[data-close-look]").forEach((button) => button.addEventListener("click", closeLookLightbox));
 
 document.querySelectorAll("[data-color-button]").forEach((button) => {
   button.addEventListener("click", () => {
@@ -119,7 +147,10 @@ document.querySelectorAll("[data-color-button]").forEach((button) => {
 });
 
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") closeCart();
+  if (event.key === "Escape") {
+    closeCart();
+    closeLookLightbox();
+  }
 });
 
 renderCart();

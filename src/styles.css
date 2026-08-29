@@ -50,6 +50,10 @@ body.cart-open {
   overflow: hidden;
 }
 
+body.look-open {
+  overflow: hidden;
+}
+
 img,
 video {
   display: block;
@@ -673,11 +677,25 @@ main {
   height: auto;
   object-fit: cover;
   background: #101010;
+  cursor: zoom-in;
+  transition:
+    filter 220ms ease,
+    transform 260ms ease;
+}
+
+.look-slide:hover img {
+  filter: brightness(1.04) contrast(1.03);
+  transform: scale(1.045);
 }
 
 .look-slide.is-sketch img {
   filter: grayscale(1) contrast(1.08) brightness(0.9);
   transform: rotate(2deg) scale(0.96);
+}
+
+.look-slide.is-sketch:hover img {
+  filter: grayscale(0.75) contrast(1.08) brightness(0.98);
+  transform: rotate(2deg) scale(1.01);
 }
 
 .look-meta {
@@ -827,6 +845,75 @@ main {
   justify-content: center;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.look-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  display: grid;
+  place-items: center;
+  padding: clamp(18px, 4vw, 54px);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
+.look-lightbox.is-open {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.look-lightbox-scrim {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(0, 0, 0, 0.78);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+.look-lightbox-frame {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  justify-items: center;
+  gap: 14px;
+  max-width: min(86vw, 760px);
+  max-height: 90svh;
+  transform: translateY(12px) scale(0.98);
+  transition: transform 220ms ease;
+}
+
+.look-lightbox.is-open .look-lightbox-frame {
+  transform: translateY(0) scale(1);
+}
+
+.look-lightbox-frame img {
+  width: auto;
+  max-width: 100%;
+  max-height: 82svh;
+  object-fit: contain;
+  background: #080808;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.48);
+}
+
+.look-lightbox-frame p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.look-lightbox-close {
+  justify-self: end;
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid var(--ink);
+  background: var(--paper);
+  color: var(--ink);
+  text-transform: uppercase;
+  font-size: 11px;
 }
 
 .menu-toggle:hover,

@@ -403,6 +403,22 @@
       </div>
     </aside>
 
+    <aside
+      class="look-lightbox"
+      data-look-lightbox
+      aria-hidden="true"
+      aria-label="Detailed look preview"
+    >
+      <button class="look-lightbox-scrim" type="button" data-close-look aria-label="Close look preview"></button>
+      <div class="look-lightbox-frame" role="dialog" aria-modal="true" aria-labelledby="look-lightbox-title">
+        <button class="look-lightbox-close" type="button" data-close-look aria-label="Close look preview">
+          Close
+        </button>
+        <img data-look-lightbox-image src="assets/img/generated/looks/fw27_1.webp" alt="" />
+        <p id="look-lightbox-title" data-look-lightbox-caption></p>
+      </div>
+    </aside>
+
     <script src="src/main.js" defer></script>
   </body>
 </html>
