@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Evgrafov high fashion collection, minimal lookbook shopping experience." />
-  <title>Evgrafov</title>
+  <meta name="description" content="Evgrafov couture appointments and made-to-measure work." />
+  <title>Evgrafov Couture</title>
   <link rel="icon" href="assets/favicon/favicon.ico" sizes="any" />
   <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png" />
@@ -16,8 +16,9 @@
 
 <body>
   <header class="site-header" aria-label="Primary navigation">
-    <span></span>
-    <a class="brand-mark" href="#runway" aria-label="Evgrafov home">
+    <a class="back-link header-back" href="index.html"></a>
+
+    <a class="brand-mark" href="index.html" aria-label="Evgrafov home">
       <img src="assets/img/logo_trans.png" width="1024" height="1024" alt="Evgrafov" />
     </a>
 
@@ -33,44 +34,20 @@
   </header>
 
   <nav class="category-menu" id="categoryMenu" aria-label="Site navigation">
-    <a href="#runway" class="is-active">Runway</a>
-    <a href="#split">Editorial</a>
-    <a href="#services">Services</a>
+    <a href="index.html#runway">Runway</a>
+    <a href="index.html#split">Editorial</a>
+    <a href="index.html#services">Services</a>
     <a href="collection.html">Collection</a>
-    <a href="couture.html">Couture</a>
+    <a href="couture.html" class="is-active">Couture</a>
   </nav>
 
   <main>
-    <section class="hero home-hero" id="runway" aria-labelledby="runway-title">
-      <figure class="home-hero-figure">
-        <img src="assets/img/shoot/fw27_6_2_shoot.jpg" width="1365" height="2048" alt="Evgrafov Fall-Winter 27 runway look" />
-        <figcaption class="home-hero-copy">
-          <h1 id="runway-title">EVGRAFOV</h1>
-          <p>Fall-Winter 27</p>
-        </figcaption>
-      </figure>
-    </section>
-
-    <section class="split-image-section" id="split" aria-label="FW27 editorial images">
-      <img src="assets/img/shoot/fw27_1_shoot_square.jpg" width="1365" height="1365" alt="FW27 editorial look 01" loading="lazy" />
-      <img src="assets/img/shoot/fw27_7_1_shoot.jpg" width="1365" height="2048" alt="FW27 editorial look 07" loading="lazy" />
-    </section>
-
-    <section class="services-section" id="services" aria-labelledby="services-title">
-      <h2 id="services-title">Explore our servises</h2>
-      <div class="services-grid">
-        <a class="service-link" href="collection.html">
-          <img src="assets/img/shoot/fw27_1_shoot.jpg" width="1365" height="2048" alt="FW27 collection preview" loading="lazy" />
-          <span>Check collection</span>
-        </a>
-        <a class="service-link" href="couture.html">
-          <img src="assets/img/shoot/fw27_6_2_shoot.jpg" width="1365" height="2048" alt="Evgrafov couture preview" loading="lazy" />
-          <span>Couture</span>
-        </a>
-        <a class="service-link" href="mailto:alekseievgrafov@outlook.com?subject=Request%20an%20appointment">
-          <img src="assets/img/shoot/fw27_7_1_shoot.jpg" width="1365" height="2048" alt="Appointment preview" loading="lazy" />
-          <span>Book an appointment</span>
-        </a>
+    <section class="couture-page-section" aria-labelledby="couture-title">
+      <img src="assets/img/shoot/fw27_6_2_shoot.jpg" width="1365" height="2048" alt="Evgrafov couture silhouette" />
+      <div>
+        <h1 id="couture-title">Couture</h1>
+        <p>Private made-to-measure work, developed by appointment.</p>
+        <a href="mailto:alekseievgrafov@outlook.com?subject=Request%20an%20appointment">Book an appointment</a>
       </div>
     </section>
   </main>
@@ -78,12 +55,12 @@
   <footer class="site-footer">
     <div class="footer-content">
       <div class="footer-links">
-        <a href="/templates/terms.html">Terms & Conditions</a>
-        <a href="/templates/privacy.html">Privacy Policy</a>
-        <a href="/templates/shipping.html">Shipping & Returns</a>
+        <a href="templates/terms.html">Terms & Conditions</a>
+        <a href="templates/privacy.html">Privacy Policy</a>
+        <a href="templates/shipping.html">Shipping & Returns</a>
       </div>
       <div class="footer-social">
-        <a href="instagram.com/theonlyrejlet" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://instagram.com/theonlyrejlet" target="_blank" rel="noopener">Instagram</a>
         <a href="mailto:alekseievgrafov@outlook.com">Contact</a>
       </div>
     </div>

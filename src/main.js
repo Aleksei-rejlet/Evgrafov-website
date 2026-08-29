@@ -1,5 +1,6 @@
 const menuLinks = [...document.querySelectorAll(".category-menu a")];
 const sections = menuLinks
+  .filter((link) => link.getAttribute("href")?.startsWith("#"))
   .map((link) => document.querySelector(link.getAttribute("href")))
   .filter(Boolean);
 const cartButton = document.querySelector(".cart-button");
