@@ -56,7 +56,7 @@ const renderCart = () => {
   }
 
   if (totalItems === 0) {
-    cartItems.innerHTML = "<p>Your selection is empty.</p>";
+    cartItems.innerHTML = "<p>We are not accepting orders at the moment. Request private appointments for custom orders.</p>";
     return;
   }
 

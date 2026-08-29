@@ -1,114 +1,223 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Evgrafov high fashion collection, minimal lookbook shopping experience."
+    />
+    <title>Evgrafov</title>
+    <link rel="icon" href="assets/favicon/favicon.ico" sizes="any" />
+    <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    <link rel="preload" href="src/styles.css" as="style" />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Evgrafov high fashion collection, minimal lookbook shopping experience." />
-  <title>Evgrafov</title>
-  <link rel="icon" href="assets/favicon/favicon.ico" sizes="any" />
-  <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png" />
-  <link rel="manifest" href="assets/favicon/site.webmanifest" />
-  <link rel="preload" href="src/styles.css" as="style" />
-  <link rel="stylesheet" href="src/styles.css" />
-</head>
+  <body>
+    <header class="site-header" aria-label="Primary navigation">
+      <span></span>
+      <a class="brand-mark" href="#runway" aria-label="Evgrafov home">
+        <img
+          src="assets/img/logo_trans.png"
+          width="1024"
+          height="1024"
+          alt="Evgrafov"
+        />
+      </a>
 
-<body>
-  <header class="site-header" aria-label="Primary navigation">
-    <span></span>
-    <a class="brand-mark" href="#runway" aria-label="Evgrafov home">
-      <img src="assets/img/logo_trans.png" width="1024" height="1024" alt="Evgrafov" />
-    </a>
+      <button
+        class="cart-button"
+        type="button"
+        aria-label="Open cart"
+        aria-controls="cartPanel"
+      >
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+        <span class="cart-count hidden" data-cart-count>0</span>
+      </button>
+    </header>
 
-    <button class="cart-button" type="button" aria-label="Open cart" aria-controls="cartPanel">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-        stroke-linecap="round" stroke-linejoin="round">
-        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-        <line x1="3" y1="6" x2="21" y2="6"></line>
-        <path d="M16 10a4 4 0 0 1-8 0"></path>
-      </svg>
-      <span class="cart-count hidden" data-cart-count>0</span>
-    </button>
-  </header>
+    <nav class="category-menu" id="categoryMenu" aria-label="Site navigation">
+      <a href="#runway" class="is-active">Runway</a>
+      <a href="#split">Editorial</a>
+      <a href="#services">Services</a>
+      <a href="collection.html">Collection</a>
+      <a href="couture.html">Couture</a>
+    </nav>
 
-  <nav class="category-menu" id="categoryMenu" aria-label="Site navigation">
-    <a href="#runway" class="is-active">Runway</a>
-    <a href="#split">Editorial</a>
-    <a href="#services">Services</a>
-    <a href="collection.html">Collection</a>
-    <a href="couture.html">Couture</a>
-  </nav>
+    <main>
+      <section
+        class="hero home-hero"
+        id="runway"
+        aria-labelledby="runway-title"
+      >
+        <figure class="home-hero-figure">
+          <img
+            src="assets/img/shoot/fw27_6_2_shoot.jpg"
+            width="1365"
+            height="2048"
+            alt="Evgrafov Fall-Winter 27 runway look"
+          />
+          <figcaption class="home-hero-copy">
+            <h1 id="runway-title">EVGRAFOV</h1>
+            <p>Fall-Winter 27</p>
+          </figcaption>
+        </figure>
+      </section>
 
-  <main>
-    <section class="hero home-hero" id="runway" aria-labelledby="runway-title">
-      <figure class="home-hero-figure">
-        <img src="assets/img/shoot/fw27_6_2_shoot.jpg" width="1365" height="2048" alt="Evgrafov Fall-Winter 27 runway look" />
-        <figcaption class="home-hero-copy">
-          <h1 id="runway-title">EVGRAFOV</h1>
-          <p>Fall-Winter 27</p>
-        </figcaption>
-      </figure>
-    </section>
+      <section
+        class="split-image-section"
+        id="split"
+        aria-label="FW27 editorial images"
+      >
+        <img
+          src="assets/img/shoot/fw27_1_shoot_square.jpg"
+          width="1365"
+          height="1365"
+          alt="FW27 editorial look 1"
+          loading="lazy"
+        />
+        <img
+          src="assets/img/shoot/fw27_7_1_shoot.jpg"
+          width="1365"
+          height="2048"
+          alt="FW27 editorial look 7"
+          loading="lazy"
+        />
+      </section>
 
-    <section class="split-image-section" id="split" aria-label="FW27 editorial images">
-      <img src="assets/img/shoot/fw27_1_shoot_square.jpg" width="1365" height="1365" alt="FW27 editorial look 01" loading="lazy" />
-      <img src="assets/img/shoot/fw27_7_1_shoot.jpg" width="1365" height="2048" alt="FW27 editorial look 07" loading="lazy" />
-    </section>
+      <section
+        class="split-image-section"
+        id="split"
+        aria-label="FW27 editorial images 2"
+      >
+        <img
+          src="assets/img/shoot/fw27_2_shoot_square.jpg"
+          width="1365"
+          height="1365"
+          alt="FW27 editorial look 2"
+          loading="lazy"
+        />
+        <img
+          src="assets/img/shoot/fw27_3_shoot_square.jpg"
+          width="1365"
+          height="2048"
+          alt="FW27 editorial look 3"
+          loading="lazy"
+        />
+      </section>
 
-    <section class="services-section" id="services" aria-labelledby="services-title">
-      <h2 id="services-title">Explore our servises</h2>
-      <div class="services-grid">
-        <a class="service-link" href="collection.html">
-          <img src="assets/img/shoot/fw27_1_shoot.jpg" width="1365" height="2048" alt="FW27 collection preview" loading="lazy" />
-          <span>Check collection</span>
-        </a>
-        <a class="service-link" href="couture.html">
-          <img src="assets/img/shoot/fw27_6_2_shoot.jpg" width="1365" height="2048" alt="Evgrafov couture preview" loading="lazy" />
-          <span>Couture</span>
-        </a>
-        <a class="service-link" href="mailto:alekseievgrafov@outlook.com?subject=Request%20an%20appointment">
-          <img src="assets/img/shoot/fw27_7_1_shoot.jpg" width="1365" height="2048" alt="Appointment preview" loading="lazy" />
-          <span>Book an appointment</span>
-        </a>
+      <section
+        class="services-section"
+        id="services"
+        aria-labelledby="services-title"
+      >
+        <h2 id="services-title">Explore our servises</h2>
+        <div class="services-grid">
+          <a class="service-link" href="collection.html">
+            <img
+              src="assets/img/shoot/fw27_5_shoot_square.jpg"
+              width="512"
+              height="512"
+              alt="FW27 collection preview"
+              loading="lazy"
+            />
+            <span>Check collection</span>
+          </a>
+          <a class="service-link" href="couture.html">
+            <img
+              src="assets/img/shoot/couture_tag.jpg"
+              width="512"
+              height="512"
+              alt="Evgrafov couture preview"
+              loading="lazy"
+            />
+            <span>Couture</span>
+          </a>
+          <a
+            class="service-link"
+            href="mailto:alekseievgrafov@outlook.com?subject=Request%20an%20appointment"
+          >
+            <img
+              src="assets/img/shoot/shop.jpg"
+              width="512"
+              height="512"
+              alt="Appointment preview"
+              loading="lazy"
+            />
+            <span>Book an appointment</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="/templates/terms.html">Terms & Conditions</a>
+          <a href="/templates/privacy.html">Privacy Policy</a>
+          <a href="/templates/shipping.html">Shipping & Returns</a>
+        </div>
+        <div class="footer-social">
+          <a href="instagram.com/theonlyrejlet" target="_blank" rel="noopener"
+            >Instagram</a
+          >
+          <a href="mailto:alekseievgrafov@outlook.com">Contact</a>
+        </div>
       </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-content">
-      <div class="footer-links">
-        <a href="/templates/terms.html">Terms & Conditions</a>
-        <a href="/templates/privacy.html">Privacy Policy</a>
-        <a href="/templates/shipping.html">Shipping & Returns</a>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 Evgrafov. All rights reserved.</p>
       </div>
-      <div class="footer-social">
-        <a href="instagram.com/theonlyrejlet" target="_blank" rel="noopener">Instagram</a>
-        <a href="mailto:alekseievgrafov@outlook.com">Contact</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p class="footer-copyright">© 2026 Evgrafov. All rights reserved.</p>
-    </div>
-  </footer>
+    </footer>
 
-  <aside class="cart-panel" id="cartPanel" aria-hidden="true" aria-label="Shopping cart">
-    <div class="cart-scrim" data-close-cart></div>
-    <div class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title">
-      <div class="cart-heading">
-        <h2 id="cart-title">Cart</h2>
-        <button type="button" data-close-cart aria-label="Close cart">
-          Close
-        </button>
+    <aside
+      class="cart-panel"
+      id="cartPanel"
+      aria-hidden="true"
+      aria-label="Shopping cart"
+    >
+      <div class="cart-scrim" data-close-cart></div>
+      <div
+        class="cart-drawer"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="cart-title"
+      >
+        <div class="cart-heading">
+          <h2 id="cart-title">Cart</h2>
+          <button type="button" data-close-cart aria-label="Close cart">
+            Close
+          </button>
+        </div>
+        <div class="cart-items" data-cart-items>
+          <p>
+            We are not accepting orders at the moment. Request private
+            appointments for custom orders.
+          </p>
+        </div>
+        <a
+          class="checkout-button"
+          href="mailto:alekseievgrafov@outlook.com?subject=Request%20an%20appointment"
+          >Request private appointment</a
+        >
       </div>
-      <div class="cart-items" data-cart-items>
-        <p>Your selection is empty.</p>
-      </div>
-      <button class="checkout-button" type="button">Request order</button>
-    </div>
-  </aside>
+    </aside>
 
-  <script src="src/main.js" defer></script>
-</body>
-
+    <script src="src/main.js" defer></script>
+  </body>
 </html>

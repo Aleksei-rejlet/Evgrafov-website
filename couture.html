@@ -43,8 +43,11 @@
 
   <main>
     <section class="couture-page-section" aria-labelledby="couture-title">
-      <img src="assets/img/shoot/fw27_6_2_shoot.jpg" width="1365" height="2048" alt="Evgrafov couture silhouette" />
-      <div>
+      <video class="couture-video" autoplay muted loop playsinline preload="metadata"
+        poster="assets/img/shoot/fw27_6_2_shoot.jpg">
+        <source src="assets/vid/look_anim.mp4" type="video/mp4" />
+      </video>
+      <div class="couture-copy">
         <h1 id="couture-title">Couture</h1>
         <p>Private made-to-measure work, developed by appointment.</p>
         <a href="mailto:alekseievgrafov@outlook.com?subject=Request%20an%20appointment">Book an appointment</a>
@@ -79,9 +82,9 @@
         </button>
       </div>
       <div class="cart-items" data-cart-items>
-        <p>Your selection is empty.</p>
+        <p>We are not accepting orders at the moment. Request private appointments for custom orders.</p>
       </div>
-      <button class="checkout-button" type="button">Request order</button>
+      <a class="checkout-button" href="mailto:alekseievgrafov@outlook.com?subject=Request%20an%20appointment">Request private appointment</a>
     </div>
   </aside>
 
