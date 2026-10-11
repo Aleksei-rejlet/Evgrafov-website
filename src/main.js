@@ -137,7 +137,7 @@ document.querySelectorAll("[data-color-button]").forEach((button) => {
     image.src = button.dataset.colorSrc;
     image.alt = button.dataset.colorAlt;
     if (label) {
-      label.textContent = `${button.dataset.colorName} colorway.`;
+      label.textContent = button.dataset.colorDescription || `${button.dataset.colorName} colorway.`;
     }
 
     document.querySelectorAll(`[data-color-button="${group}"]`).forEach((option) => {
